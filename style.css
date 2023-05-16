@@ -1,0 +1,157 @@
+*,*::before,*::after{
+    background: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: '-apple-system', 'system-ui', 'BlinkMacSystemFont', "Segoe UI",'Roboto', "Helvetica Neue", "Fira Sans",' Ubuntu', 'Oxygen', "Oxygen Sans", 'Cantarell', "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+   /* overflow: hidden;*/
+   
+}
+
+.back::before{
+    content: "";
+    background-size: cover;
+    position: absolute;
+    background:linear-gradient(to right,rgba(7, 2, 0, 0.973),rgba(243, 0, 0, 0.966));
+    min-width: 100vw;
+    min-height:1000px;
+    z-index: -1;
+    opacity: 0.9;  
+
+}
+
+
+
+
+.profile img{
+    height: 30vh;
+    width: 30vw;  
+    border-radius: 50%;
+    object-position:fill;
+    object-fit: cover;
+    background: blue;
+    border: none;
+
+}
+
+.profile{ 
+    margin-top: 10px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide 1s ease-in-out 0s 1 forwards;
+}
+@keyframes slide {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform:translatex(0)
+    }
+    
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+    animation: alide 1s ease-in-out 0s 1 forwards ;
+}
+
+@keyframes alide {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttons{
+    padding:0.5em;
+    transition-duration: 2s;
+    margin: 10px 0 10px 0;
+    width: 50vw;
+    height: 10vh;
+    border:none;
+    outline:none; 
+    border-radius: 0.25em;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right,rgba(7, 2, 0, 0.973),rgba(243, 0, 0, 0.966));
+}
+
+
+.links{
+    animation: flow 1s ease-in-out 0s 1 forwards  ;
+}
+
+@keyframes flow {
+  0%{
+    transform : scale(0)
+   }
+
+   90%{
+      transform:scale(1.03)
+   }
+
+   100%{
+      transform: scale(1);
+   }
+    
+}
+
+.buttons a{
+    flex-grow: 1;
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    margin-left: 10px;
+  
+}
+
+.buttons:hover{
+    transform: scale(1.1);
+   
+    opacity: 0.5;
+    
+
+   
+}
+
+@media (min-width:1000px){
+    .profile img{
+        width: 15vw;
+        height: 15vw;
+       
+    }
+}
+
+@media (max-width:400px){
+    .profile img{
+       width: 30vh;
+       height: 30vh;
+
+    }
+}
+
+i{
+    margin-right: 5px;
+    width: 3rem;
+}
+
+
+
+
+
+
+
